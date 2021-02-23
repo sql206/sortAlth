@@ -1,0 +1,26 @@
+package Order;
+
+/**
+ * @author admin
+ *
+ */
+public class test {
+
+	int age;
+	public test() {
+		
+	}
+	int changeAge(int newa) {
+		setAge(newa);
+		age=newa;
+		return age;	
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age1) {
+		age = age1;
+	}
+
+}

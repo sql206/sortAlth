@@ -1,0 +1,20 @@
+package Order;
+
+public class MainRunner {
+
+	int[] nums = { 1, 5, 6, 3, 4, 7, 2, 9, 8 };
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MainRunner mainRunner = new MainRunner();
+		
+	}
+
+	private int[] sortByMaoPao(int [] arraySource) {
+		
+		
+		return arraySource;
+	}
+	
+	
+}

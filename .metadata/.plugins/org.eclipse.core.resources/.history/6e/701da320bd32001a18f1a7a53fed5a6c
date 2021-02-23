@@ -1,0 +1,71 @@
+package Order;
+
+import java.util.Arrays;
+
+public class MainRunner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int[] nums = { 1, 5, 6, 3, 4, 7, 2, 9, 8 };
+		int[] nums = { 9, 8 ,7,6,5,4,3,2,1};
+		MainRunner mainRunner = new MainRunner();
+		int[] result = mainRunner.sortByMaoPao(nums);
+		for (int i : result) {
+			System.out.println(i + "   ");
+		}
+	}
+
+	/**
+	 * 冒泡排序大的往后每次少比一次
+	 * 
+	 * @param arraySource
+	 * @return
+	 */
+	private int[] sortByMaoPao(int[] arraySource) {
+		int[] arr = Arrays.copyOf(arraySource, arraySource.length);
+		int time = 0;
+		for (int i = 1; i < arr.length; i++) {
+			boolean flag = true;
+			for (int j = 0; j < arr.length - i; j++) {
+				if (arr[j] > arr[j + 1]) {
+					int tep = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = tep;
+					flag = false;
+				}
+				time += 3;
+			}
+			if (flag) {
+				break;
+			}
+		}
+		System.out.println("时间复杂度为：" + time);
+		return arr;
+	}
+
+	private int[] sortBy(int[] arraySource) {
+		int[] arr = Arrays.copyOf(arraySource, arraySource.length);
+		int time = 0;
+		for (int i = 1; i < arr.length; i++) {
+			boolean flag = true;
+			for (int j = 0; j < arr.length - i; j++) {
+				if (arr[j] > arr[j + 1]) {
+					int tep = arr[j];
+					time += 1;
+					arr[j] = arr[j + 1];
+					time += 1;
+					arr[j + 1] = tep;
+					time += 1;
+					flag = false;
+				}
+				
+			}
+			if (flag) {
+				break;
+			}
+		}
+		System.out.println("时间复杂度为：" + time);
+		return arr;
+	}
+
+}

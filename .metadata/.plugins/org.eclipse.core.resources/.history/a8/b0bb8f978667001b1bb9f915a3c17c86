@@ -1,0 +1,19 @@
+package Order;
+import Order.test;
+public class test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		test t=new test();
+		test t1=new test();
+		t.changeAge(15);
+		t1.changeAge(12);
+		t1.setAge(88);
+		System.out.println(t.getAge());	
+		System.out.println(t.age);	
+		System.out.println(t1.age);	
+		System.out.println(t1.getAge());	
+	}
+
+}

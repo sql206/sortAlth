@@ -1,0 +1,38 @@
+package Order;
+
+/**
+ * @author admin
+ *
+ */
+public class test {
+
+	int age=10;
+	public test() {
+		
+	}
+	int changeAge(int newa) {
+		this.age=newa;
+		
+		return this.age;	
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		test t=new test();
+		test t1=new test();
+		t.changeAge(15);
+		setAge();
+		t1.changeAge(12);
+		
+		System.out.println(t.age);	
+		System.out.println(t1.age);	
+		
+	}
+
+}
